@@ -1,0 +1,59 @@
+Javascript Executon Context (how will the program run)
+-> Js runs our program in two phase 
+-> Whenever we give code to js . The first thing that is made is Global Execution context and (this) is assigned to it .
+-> js is single threaded
+
+
+-> Global execution context 
+-> Function execution context
+
+phase
+ Memory Creation Phase
+ Execution Phase
+
+ let val1 = 10
+ let val2 =5
+ function addNum(num1,num2){
+    let total = num1 + num2
+    return total
+ }
+ let result1 = addNum(val1,val2)
+ let result2 = addNum(10,2)
+
+* Step 1-> Global Execution / Environment 
+  it is firstly alocated in this 
+
+* step 2-> Memory Phase
+ All var are collected . 
+! val1->undefined , val2->undeined
+! addNum -> defination of function (  let total = num1 + num2
+    return total
+ })
+result1->undefined , result2->undefined
+
+ * Step 3 - > execution phase/context
+ val1 <- 10
+ val2  <- 5
+ addNum -> Whenever a function is called a environment sandbox is made which conatin (new variable environment + execution thread)
+ Whenever a function is made a sandbox which contain memory phase and execution phase needed to be created everytime .
+ So Memory Phase is created :                             Execution Context
+ Val1,Val2,total-> undefined                              num1-> 10 , num2->5 , total->15 Value of total is return to global execution context.
+ After the work is done it will get deleted .
+
+
+
+
+
+CALL STACK
+one()
+Concept of lifo is used 
+             |               |   
+             |               |   
+             |               |   
+             |               |
+             |      one()                    | it is assigned in stack and when work is completed it get remoed from stack
+             |     global execution          |
+              _ _ _ _ _ _ _ _ 
+
+ 
+              
