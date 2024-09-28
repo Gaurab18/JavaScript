@@ -1,0 +1,60 @@
+getElementById is a method so we need to pass the parameter in it . 
+getElementById('Parameter')
+
+When we make strucutre in DOM we use className instead of class but in the html it is called class , in elements 
+
+We can get all attribute using getAttribute we need to pass the value of attribute who we want
+e.g, document.getElementById('title').getAttribute('id')
+Result = > value - title
+
+document.getElementById('title').setAttribute('class','test') //changes the attribute 
+undefined
+
+document.getElementById('title')
+<h1 id=​"title" class=​"test">​ DOM Learning on Chai aur Code ​</h1>​
+
+Assigning the value into title variable so we can use other operation
+const title = document.getElementById('title')
+undefined
+
+using style
+title.style.backgroundColor = 'green'
+'green'
+title.style.padding = "15px" 
+'15px'
+title.style.borderRadius = "15px"
+'15px'
+
+title.textContent  // it show the hiddent text , which is hidden by using some property
+'\n            DOM Learning on Chai aur Code  \n        Test Text\n        '
+title.innerText  //it dont show hidden text
+'DOM Learning on Chai aur Code'
+
+title.innerHTML  => it show the html written in it
+'\n            DOM Learning on Chai aur Code  \n        <span style="display:none">Test Text</span>\n '
+
+=> Some useful query
+document.querySelector('h1')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('#title') //for id
+<h1 id=​"title" class=​"heading">​…​</h1>​
+query selector select the first parameter
+document.querySelector('.heading') //for class
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+//css selector read
+
+list created and operation
+document.querySelector('ul')
+<ul>​…​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.style.backgroundColor = "Green"
+'Green'
+
+
+

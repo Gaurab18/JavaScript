@@ -1,0 +1,14 @@
+
+                                                                Window
+                                            
+                                                                Document
+
+                                                                Html
+
+                                        head                                        body
+
+                                meta        title                          div                          attribute
+        
+                                |               |                   h1                paragraph
+                         attribute          text node       
+                                                            attribute   txt node       txt node 

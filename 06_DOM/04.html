@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style = "background-color:#212121 ; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = ` ${langName}` //adding language name
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+
+
+    //Optimised approach to add language
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(2)") //to li:nth-child(value which we want) here we used 2nd so python
+    //here nth means the one child which we want to change 
+    console.log(secondLang);
+    // secondLang.innerHTML = "Mojo" // inner HTML traverse whole list so it is not optimized
+    
+    //Editing by creating variable
+    const newli = document.createElement('li')
+    newli.textContent = "mojo" //not altered yet we have just created a new variable in air
+    secondLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>' //it changes outer html
+
+    //remove
+    const lastLang = document.querySelector('li:last-child') //li:last-child means we are working on last element 
+    lastLang.remove()
+</script>
+</html>
