@@ -1,0 +1,55 @@
+<!-- //Lesson on setTimeout and setInterval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+    // const sayDate = function(str){
+    //     console.log(str,Date.now());
+    // }
+
+    // setInterval(sayDate,1000,"hi") //we can pass parameter in setInterval so we use argument as str in function
+
+    // const interValid = setInterval(sayDate,100,"hi"); //created a variable to use in clearInterval
+    // clearInterval(interValid);
+
+    // const sayName = function(){
+    //     console.log('Interval',Date.now())
+    // }
+    
+    // const valid = setInterval(sayName,2000);
+    // clearInterval(valid); //it will remove everything from our memory .
+    
+    //Use start and stop button to start and stop printing in console.
+
+    //Start 
+    let valid = 0
+    document.querySelector('#start').addEventListener('click',function(){
+        valid = setInterval(changeMe,3000);
+        // alert(`What's Up !`);
+        console.log('Use of Start Button ')
+    })
+    const changeMe = function(){
+        document.querySelector('h1').innerHTML = `What's UP ! `
+    }
+
+    //Stop
+    //Need to work on it ? => Doubt Clear 
+    //unable to access the changeMe => declare the variable in global scope and use it in clearInterval
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(valid)
+        console.log('Done!')
+    })
+</script>
+</html>
